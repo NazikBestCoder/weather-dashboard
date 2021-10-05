@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body class="vh-100 bg-light">
+    <header>
+        <nav class="navbar navbar-light bg-secondary">
+            <div class="container-fluid justify-content-center">
+              <a class="navbar-brand text-light" href="#">Weather Dashboard</a>
+            </div>
+          </nav>
+    </header>
+
+    <main>
+        <!-- SEARCH //PAST SEARCHES//CLEAR// -->
+        <div class="h-100 container-fluid">
+            <div class="row h-100">
+                <div class="mh-100 col-lg-3">
+                    <h1>Search  for a City:</h1>
+                    <input type="text" placeholder="Philadelphia">
+                    <button class="btn btn-primary search-button">Search</button>
+                    <button class="btn btn-danger clear-button">Clear History</button>
+                    <hr size="5"/>
+                    <ul class="past-searches"></ul>
+                </div>
+                <!-- TODAY FORECAST -->
+                <div class="mh-100 col-lg-9">
+                    <div class="row city-info-div">
+                        <h4 class="h-35 city-name"></h4>
+                        <ul class="h-75 city-info-list">
+                            <li id="current-temp"></li>
+                            <li id="current-wind"></li>
+                            <li id="current-humidity"></li>
+                            <li id="current-uvi"></li>
+                            <li id="current-weather-icon"></li>
+                        </ul>
+                    </div>
+                    <!-- 5 DAY FORECAST BOXES -->
+                    <div class="forecast h-50 container-fluid">
+                        <h3 class="row">5-Day Forecast:</h3>
+                        <div class="h-100 row d-flex justify-content-around">
+                            <section class="no-padding h-75 col-xl-2 col-lg-3 col-sm-5">
+                                <section class="h-90 bg-primary my-3">
+                                    <h3 class="forecast-date text-light"></h3>
+                                    <ul class="forecast-info text-light" id="1">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </section>
+                            </section>
+                            <section class="no-padding h-75 col-xl-2 col-lg-3 col-sm-5">
+                                <section class="h-90 bg-primary my-3">
+                                    <h3 class="forecast-date text-light"></h3>
+                                    <ul class="forecast-info text-light" id="2">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </section>
+                            </section>
+                            <section class="no-padding h-75 col-xl-2 col-lg-3 col-sm-5">
+                                <section class="h-90 bg-primary my-3">
+                                    <h3 class="forecast-date text-light"></h3>
+                                    <ul class="forecast-info text-light" id="3">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </section>
+                            </section>
+                            <section class="no-padding h-75 col-xl-2 col-lg-4 col-sm-5">
+                                <section class="h-90 bg-primary my-3">
+                                    <h3 class="forecast-date text-light"></h3>
+                                    <ul class="forecast-info text-light" id="4">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </section>
+                            </section>
+                            <section class="no-padding h-75 col-xl-2 col-lg-4 col-sm-5">
+                                <section class="h-90 bg-primary my-3">
+                                    <h3 class="forecast-date text-light"></h3>
+                                   
+                                    <ul class="forecast-info text-light" id="5">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </section>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
