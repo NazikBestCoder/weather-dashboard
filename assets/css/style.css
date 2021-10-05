@@ -8,15 +8,12 @@ input {
   main {
     height: 90%;
   }
-  /* li img {
-  display: flex;
-  } */
+ 
   title {
     font-size: xx-large;
     font-weight: 400;
-    
-  
   }
+
   hr {
     margin-bottom: 4px;
   }
@@ -45,7 +42,7 @@ input {
   
   .city-info-list {
     list-style-type: none;
-    /* display: inline; */
+   
   }
   
   .city-info-list li {
