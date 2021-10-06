@@ -93,4 +93,15 @@ function getWeatherFromButton() {
                         })
             })
 } 
-
+// =============================
+// ====CURRENT==================
+// ===========WEATHER===========
+// =================DISPLAY=====
+// =============================
+var displayCityName = $(".city-name");
+var displayCityInfo = $(".city-info");
+var displayCurrentTemp = $("#current-temp");
+var displayCurrentWind = $("#current-wind");
+var displayCurrentHumidity = $("#current-humidity");
+var displayCurrentUVI = $("#current-uvi");
+var displayCurrentWeather = $("#current-weather-icon");
