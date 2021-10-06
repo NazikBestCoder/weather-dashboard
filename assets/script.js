@@ -4,6 +4,26 @@ var pastSearches = $(".past-searches");
 searchBtn.on("click", saveInput);
 cityInput.on("keydown", saveInputOnEnter);
 
+// Function get Forecast from Search initial input
+function getForecastFromSearch(city) {
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=imperial&appid=" + APIKey
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+            .then(function (data) {
+                var lat = data.coord.lat;
+                var lon = data.coord.lon;
+                var newUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIKey
+                fetch(newUrl)
+                    .then(function (newResponse) {
+                        return newResponse.json();
+                    })
+                        .then(function(newData) {
+                            displayWeather(newData, city);
+                        })
+            })
+}
 // Loads past searches from local storage 
 // and adds them to the array used in saveInput() and saveInputOnEnter()
 var savedCities = [getPastSearches()];
