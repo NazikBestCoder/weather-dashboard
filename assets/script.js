@@ -14,3 +14,13 @@ function saveInput() {
     createButtons();
     cityInput.val("") 
 }
+function saveInputOnEnter(e) {
+    var key = enter.key;
+    if (key === "Enter") {
+        savedCities.push(cityInput.val().toLowerCase().trim());
+        localStorage.setItem("cities", savedCities)
+        getWeatherFromSearch(cityInput.val().toLowerCase().trim());
+        createButtons();
+        cityInput.val("")
+    }
+}
