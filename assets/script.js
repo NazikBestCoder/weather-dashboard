@@ -47,3 +47,30 @@ function createButtons() {
     var cityButton = $(pastCity)
     cityButton.on("click", getWeatherFromButton)
 }
+
+
+//   This Weather Forecast function shows when you
+//    tap on past city buttons
+var data;
+var APIKey ="f178079ecb3e9f51706699da213503d1"  
+function getWeatherFromButton() {
+    var city = $(this).attr("id");
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=imperial&appid=" + APIKey
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+            .then(function (data) {
+                var lat = data.coord.lat;
+                var lon = data.coord.lon;
+                var newUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIKey
+                fetch(newUrl)
+                    .then(function (newResponse) {
+                        return newResponse.json();
+                    })
+                        .then(function(newData) {
+                            displayWeather(newData, city);
+                        })
+            })
+} 
+
