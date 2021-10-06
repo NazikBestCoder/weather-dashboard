@@ -8,11 +8,6 @@ input {
   main {
     height: 90%;
   }
- 
-  title {
-    font-size: xx-large;
-    font-weight: 400;
-  }
 
   hr {
     margin-bottom: 4px;
@@ -26,23 +21,21 @@ input {
   .past-searches {
     padding-left: 0;
   }
-  
+
+  .forecast {
+    padding: 0 20px;
+    display:inline-block;
+  }
+
   .city-info-div {
     border: 1px black solid;
     margin: 10px 0;
     padding: 5px;
     height: 60%;
-    
-  }
-  
-  .forecast {
-    padding: 0 20px;
-    display:inline-block;
   }
   
   .city-info-list {
     list-style-type: none;
-   
   }
   
   .city-info-list li {
@@ -61,22 +54,16 @@ input {
     margin: 0;
     line-height: 50px;
     padding-left: 10px;
-    /* margin-top: 0px;
-    position: absolute; */
   }
   
   .forecast-info {
     height: 80%;
-    /* margin: 0; */
     padding-left: 10px;
-  
   }
   
   .forecast-info li {
-    /* padding-bottom: 60px; */
     font-size: 100%;
     display: flex;
-    
   }
   
   .forecast-info li img {
